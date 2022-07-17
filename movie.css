@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap');
+
+:root{
+    /* COLORS */
+    --black: #000000;
+    --black-transparent: #000000a1;
+    --white: #ffffff;
+    --primary: #0079fe;
+    --secondary: #080f29;
+
+    /* FONT FAMILY */
+    --primaryFont: 'Roboto', sans-serif;
+    --titleFont: 'Bebas Neue', sans-serif;
+
+    /* FONT WEIGHT */
+    --light: 300;
+    --normal: 400;
+    --medium: 500;
+    --bold: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--primaryFont);
+}
+
+html{
+    font-size: 10px;
+    background-image: radial-gradient(rgb(23, 41, 68), rgb(21, 25, 60));
+}
+
+/* HEADER */
+#header{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--secondary);
+}
+
+#header a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 5rem;
+    letter-spacing: -1rem;
+}
+
+#header a span{
+    font-family: var(--titleFont);
+}
+
+/* CONTAINER */
+#container{
+    width: 100%;
+    height: auto;
+}
+
+#movie{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--secondary);
+}
+
+/* MOVIE */
+#movie{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 2rem;
+    overflow: hidden;
+    background-image: radial-gradient(rgb(23, 41, 68), rgb(21, 25, 60));
+}
+
+.movie img{
+    width: 80rem;
+    height: auto;
+}
+
+.movie-info{
+    width: 50rem;
+}
+
+.movie-info h2{
+    font-size: 5rem;
+    font-weight: var(--bold);
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+.movie-info p{
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+.movie-info span{
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 1100px){
+    #movie{
+        flex-direction: column;
+    }
+
+    #header{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px){
+    .movie img{
+        width: 60rem;
+    }
+}
+
+@media (max-width: 620px){
+    .movie img{
+        width: 40rem;
+    }
+
+    .movie-info{
+        width: 40rem;
+    }
+
+    .movie-info h2{
+        font-size: 4rem;
+    }
+
+    .movie-info p{
+        font-size: 1.5rem;
+    }
+
+    .movie-info span{
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 376px){
+    #header a{
+        font-size: 4rem;
+    }
+
+    .movie img{
+        width: 30rem;
+    }
+
+    .movie-info{
+        width: 30rem;
+    }
+}
